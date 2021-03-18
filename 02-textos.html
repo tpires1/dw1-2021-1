@@ -18,12 +18,25 @@
         mark {
             background-color: aqua;
         }
+        h1 {
+            /* Valores para text-align
+            left, right, center, justufy
+            */
+            text-align: center;
+        }
+        /* <p class="dir"> */
+        p.dir {
+            text-align: right;
+        }
+        
     </style>
 </head>
 <body>
     <h1>Formatação de textos</h1>
     <!--Tag <u> = Underline (sublinado) (NÃO USAR)-->
         <!--Tag <address> = endereço-->
+    <p> class="dir"História baseada em fatos reais.</p>
+
     <p>Orkutilson morava na <address>Rua Sobe e Desce,
     333</address>, e seu e-mail era 
     <address>orkutilson@gmail.com</address>. 
@@ -66,5 +79,33 @@
         <p>Orkutilson também gostava de fórmulas. Suas preferidas eram
             H<sub>2</sub>O e E = mc<sup>2</sup>
         </p>
+        <!--
+            <quote> = citações no meio de um parágrafo
+             <blockquote> = um bloco de citação (com várias linhas, por exemplo)
+        -->
+        <p>Sua frase favorita era <quote>"Penso, logo existo" (Descartes)</quote>. E seu trecho de música
+        preferida era:</p>
+        <blockquote>
+            Há tantos mundos diferentes<br>
+            Tantos sóis diferentes.<br>
+            E nós temos apenas um mundo,<br>
+            Mas vivemos um mundos diferentes.
+            (Dire Straits, Brothers in Arms)
+        </blockquote>
+
+        <!--
+            <abbr> = Definição de abreviações
+            <code> = representa código de programação ou marcação. No caso de ser HTML, os sinais < e > precisam ser substituídos por &lt; e &gt:, respectivamente
+        -->
+        <p>Em suas horas vagas, Orkutilson era um membro ativo da 
+            <abbr tittle="Associação dos Moradores do Bairro do Limão">ASMOBALI</abbr> 
+            e estudava 
+            <abbr tittle="HyperText Markup Language">HTML</abbr>. Suas tags favoritas eram
+            <code>&lt;blockquote&gt;</code> e <code>&lt;address&gt;</code>
+        </p>
+
+        <p> class="dir"<em>Autur/; Desconhecido</em></p>
+
+
 </body>
 </html>
