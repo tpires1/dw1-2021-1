@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links (hyperlinks ou hiperligações)</title>
+    <link rel="stylesheet" href="08.css">
+</head>
+<body>
+
+    <!--
+        Estrutura de um link
+        https://site.fatecfranca.edu.br/files/dsm-projeto-pedagogico.pdf
+        Domínio: fatecfranca.edu.br
+        O domínio especifica o "dono", o responsável pelo link.
+        O registro de domínio é controlado por órgãos e empresas, dependendo do
+        lugar do mundo. No Brasil, o órgão se chama registro.br.
+        O domínio é composta por várias partes:
+        - br: TLD (top level domain) -> domínio de nível mais alto. Nesso caso,
+            representa um país, no caso, o Brasil
+        - edu: alguns países, como o Brasil, não permitem o registro de domínios
+            diretamente após o seu TLD. Aqui, os domínios são registrados por
+            subcategorias, como EDU, que são as instituições de ensino superior
+        - fatecfranca: o nome escolhido pelo detentor do domínio
+        O subdomínio é uma parte do domínio que pode ser criada livremente pelo
+        dono do domínio.
+        - site: o subdomínio vem ANTES do nome do domínio
+        /files/dsm-projeto-pedagogico.pdf: caminho (ou rota)
+        dsm-projeto-pedagogico.pdf: nome de um arquivo
+        https://: é o PROTOCOLO de acesso ao conteúdo. É a "linguagem" que será
+          usada para comunicação entre o seu navegador e o servidor onde se encontra
+          o conteúdo. A letra s no após o http indica que a comunicação será 
+          criptografada.
+        Um link da Internet é tecnicamente chamado de URL (Universal Resouce
+        Locator): localizador universal de recursos
+    -->
+
+    <!--
+        Links são acessados em HTML pela tag <a> (anchor, âncora). O parâmetro
+        href indica o destino do link.
+        Sempre que o destino linkado NÃO pertencer ao nosso próprio site, o
+        URL precisa iniciar com o protocolo (http:// ou https://).
+        O elemento <a> também é um elemento de linha (fica na mesma linha).
+    -->
+    <!--
+        Link externo: leva para uma página em outro site.
+        Precisa comeaçar com http:// ou https:// (endereço completo)
+    -->
+    <div>   <!-- div é um elemento de bloco -->
+        <a href="https://site.fatecfranca.edu.br">Site oficial da Fatec Franca</a>
+    </div>
+
+    <!--
+        Link interno: leva para uma página do próprio site
+        Não precisa começar com o prefixo do protocolo
+    -->
+    <p> <!-- p também é um elemento de bloco -->
+        Para maiores informações sobre o uso de imagens em HTML, consulte <a href="07-imagens2.html">Imagens 2</a>. Está tudo explicado lá.
+    </p>
+
+    <!--
+        Link externo que abre em uma nova janela
+        Para isso, usamos o atributo target com o valor _blank
+    -->
+    <div>
+        <a href="https://www.cps.sp.gov.br" target="_blank">Site do Centro Paula Souza</a>
+    </div>
+
+    <!-- Link de imagem (o link pode ser externo ou interno) 
+        O "recheio" da tag <a>, em vez de ser um texto, é uma tag <img>.
+    -->
+    <div>
+        <a href="07-imagens2.html" title="Página principal do site da Apptiva">
+            <img src="img/apptiva-icon.png" alt="Site do Apptiva">
+        </a>
+    </div>
+
+    <div>
+        <a href="03-listas.html">Listas em HTML</a>
+    </div>
+
+    <div>
+        <!--
+            Atributo rel -> estabele a RELação entre a página atual e a página linkada
+            ATRIBUTO SEMÂNTICO
+            Valores possíveis:
+            nofollow -> O autor da página não endossa (não concorda, necessariamente) com o conteúdo de destino
+            prev -> Link para a página anterior do mesmo site
+            next -> Link para a página seguinte do mesmo site
+            external -> Link para um site externo
+            author -> Link para o site pessoal do autor da página
+        -->
+        <a href="https://produto.mercadolivre.com.br/MLB-1459346254-livro-html-e-css-projete-e-construa-websites-alta-books-_JM#position=2&type=item&tracking_id=efd55f3e-6c17-4ad7-b798-c5fcb82c0f23" rel="nofollow">Livro de HTML</a>
+        
+        <br>
+
+        <a href="07-imagens2.html" rel="prev">Página anterior</a>
+
+        <br>
+
+        <a href="09-nao-existe.html" rel="next">Página seguinte</a>
+
+        <br>
+    
+        <a href="http://www.pudim.com.br" rel="external">Site do pudim</a>
+
+        <br>
+
+        <a href="http://faustocintra.com.br" rel="author" target="_blank">Fale com o autor</a>
+
+    </div>
+
+    <!--
+        Links para download:
+        download="nomedoarquivo.ext" -> O nome do arquivo baixado pode ser diferente do arquivo original
+        type -> Indica o tipo MIME de arquivo
+        Lista de tipos MIME:
+        https://www.iana.org/assignments/media-types/media-types.xhtml
+    -->
+    <p>Para fazer o download da imagem, acesse 
+        <a href="img/apptiva-logo.png" download="logo.png" type="image/png">aqui</a>.</p>
+
+    <p><a href="arquivos/horario-aulas-dsm-not-2021-1.pdf" download="horario.pdf" type="application/pdf">Horário de aulas</a></p>
+
+    <p><a href="arquivos/tg-modelo-monografia-v20190904.docx" download="monografia.docx" type="application/msword">Modelo de monografia</a></p>
+
+    <!-- Download de arquivo de site externo (hotlink) 
+        Investigar: renomeação do arquivo não funciona para arquivos externos?
+    -->
+    <p><a href="https://site.fatecfranca.edu.br/files/tg-modelo-slides-2018.ppt" download="slides.ppt" type="application/vnd.ms-powerpoint">Modelo de <em>slide</em></a></p>
+    
+</body>
+</html>
